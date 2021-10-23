@@ -1,5 +1,5 @@
 # Integarting Celery with Django to asynchronous tasks 📃
-Integrating 🔗 **Celery** with Django via **Redis server** ,To-Do asynchronously 👀task without stopping the main-flow 📃 of Django-project . It increase your speed 🚀 and user experience 🤵 of website .
+Integrating 🔗 **Celery** with Django via **Redis server** ,To-Do asynchronously 👀task without stopping the main-flow 📃 of Django-project .It increase your speed 🚀 and user experience 🤵 of website .
 This repo explain how to setup Celery,and integrate it with the Django-Framework.
 
 **Note : Steps to steup Celery on production-side is different**
@@ -19,16 +19,39 @@ Modern users expect pages to load instantaneously ⚡, to solve this we consider
 
 <img src="https://miro.medium.com/max/1050/0*ppAh-AtPSXGbUAvE.png" style="height:50%;width:50%;">
 
-# Installation/Dependencies
+# Installation/Dependencies 💾
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the following modules and packages. 
 
 ```bash
-pip install Django
+pip install -r requirements.txt
 ```
+
+### [Download Redis server form here](https://download.redis.io/releases/redis-6.2.6.tar.gz) ⬇️ 
+
+# Usage 🔭
+
+*Open terminal and write following commands 📝*
+
+
+To run Celery worker
 ```bash
-pip install celery
+celery -A your_django_project_name.celery worker --pool=solo -l info
 ```
+And in separate terminal run django server
 ```bash
-pip install redis
+python manage.py runserver
 ```
+# Making tasks 📖
+Task are python functions which can be called in the django-project and also be scheduled at particular time.
+Task-function can be written in `task.py` file and can be imported anywhere in the project
+
+```
+@task()
+def Send_Mail_With_Celery(email):
+  your function goes here....
+  return "done"
+```
+
+# Contributing 🤵
+Pull requests are welcome 🖤. For major changes, please open an issue first to discuss what you would like to change.
