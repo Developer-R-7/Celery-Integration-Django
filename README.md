@@ -53,5 +53,11 @@ def Send_Mail_With_Celery(email):
   return "done"
 ```
 
+calling function
+
+```
+Send_Mail_With_Celery.delay(args)
+```
+
 # Contributing 🤵
 Pull requests are welcome 🖤. For major changes, please open an issue first to discuss what you would like to change.
