@@ -42,6 +42,11 @@ And in separate terminal run django server
 ```bash
 python manage.py runserver
 ```
+
+### Updating SMTP settings for sending mails 📨
+Change the settings for the sender-mail credential in the `settings.py` file , enter the sender mail and sender mail-password (SMTP configuartion)
+
+
 # Making tasks 📖
 Task are python functions which can be called in the django-project and also be scheduled at particular time.
 Task-function can be written in `task.py` file and can be imported anywhere in the project
@@ -58,6 +63,20 @@ calling function
 ```
 Send_Mail_With_Celery.delay(args)
 ```
+
+# Purpose 📢
+Increase Speed ⚡ and User-experience of website
+
+**NOTE the difference**
+
+#### Sending mail using Celery
+
+
+
+
+
+# Reference 🔗
+[Setup Celery in Django to asynchronous tasks](https://realpython.com/asynchronous-tasks-with-django-and-celery/)
 
 # Contributing 🤵
 Pull requests are welcome 🖤. For major changes, please open an issue first to discuss what you would like to change.
