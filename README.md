@@ -17,7 +17,9 @@ Modern users expect pages to load instantaneously ⚡, to solve this we consider
 
 <br>
 
-<img src="https://miro.medium.com/max/1050/0*ppAh-AtPSXGbUAvE.png" style="height:50%;width:50%;">
+<p align="center">
+  <img src="https://miro.medium.com/max/1050/0*ppAh-AtPSXGbUAvE.png" style="height:50%;width:50%;">
+</p>
 
 # Installation/Dependencies 💾
 
