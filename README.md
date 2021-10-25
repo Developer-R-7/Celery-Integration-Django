@@ -69,13 +69,22 @@ Send_Mail_With_Celery.delay(args)
 # Purpose 📢
 Increase Speed ⚡ and User-experience of website
 
-**NOTE the difference**
-
-#### Sending mail using Celery
 
 
+#### Sending mail using Celery 👀
+<p align="center">
+  <img src="https://github.com/Developer-R-7/Celery-Integration-Django/blob/master/static/Screenshots/WithCelery.gif" style="height:50%;width:50%;">
+</p>
 
+### Sending mail without using Celery ⌛
 
+<p align="center">
+  <img src="https://github.com/Developer-R-7/Celery-Integration-Django/blob/master/static/Screenshots/WithoutCelery.gif" style="height:50%;width:50%;">
+</p>
+
+**NOTE the difference : Celery does not stoped the next page from loading and done the task on worker whereas Without using Celery it took almost 3 seconds ⌛ , to load next page**
+
+This is just a small-function but imagine making operations on large user-database ,it would be not good ☹️ 
 
 # Reference 🔗
 [Setup Celery in Django to asynchronous tasks](https://realpython.com/asynchronous-tasks-with-django-and-celery/)
