@@ -137,15 +137,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = "******" # Use your Sender email-address password
 
 
-# Celery Configuration
-CELERY_BROKER_URL = 'redis://localhost:6379' # Use the same port ,given in the redis-server portal
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'Asia/Dhaka'
-
-
 # Note the difference by changing this to false
 # Sending mail with and without using Celery
 USE_CELERY = True

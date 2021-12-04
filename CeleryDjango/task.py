@@ -1,13 +1,12 @@
-from django.core.mail import EmailMultiAlternatives, send_mail
+from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.conf import settings
-from time import sleep
-from celery.decorators import task
+from .celery import app
 
 
 
-@task()
+@app.task
 def Send_Mail_With_Celery(email):
     html_content = render_to_string("email.html",{'email':email})
     text_content = strip_tags(html_content)
